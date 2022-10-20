@@ -123,11 +123,10 @@ tr:nth-child(even){
 .Add-score-container {
   padding-top: 0.75rem;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 .form {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
