@@ -27,7 +27,7 @@ header {
   background-color: var(--dark);
 }
 
-.primary-title{
+.primary-title {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -57,7 +57,7 @@ section {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-content: center ;
+  align-content: center;
   margin-bottom: 2rem;
 }
 
@@ -68,7 +68,7 @@ section {
 }
 
 button {
-  height: fit-content;
+  height: min-content;
   border-radius: 0.25rem;
   background: var(--light);
   border: 1px solid var(--grey);
@@ -99,7 +99,7 @@ tbody {
 }
 
 tr {
-  cursor:default;
+  cursor: default;
 }
 
 tbody {
@@ -116,7 +116,7 @@ td {
   font-weight: 500;
 }
 
-tr:nth-child(even){
+tr:nth-child(even) {
   background-color: var(--shadow);
 }
 
@@ -137,7 +137,7 @@ tr:nth-child(even){
   padding: 0.5rem;
   border-radius: 0.25rem;
   background: var(--light);
-  border: 1px solid var(--grey);  
+  border: 1px solid var(--grey);
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--dark);
@@ -146,5 +146,3 @@ tr:nth-child(even){
 .submit-btn {
   align-self: flex-end;
 }
-
-
