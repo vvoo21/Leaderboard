@@ -1,23 +1,25 @@
-import Score from './score.js';
-import Interface from './interface.js';
+import getScores from './getScores.js';
 
-const addScore = (e) => {
+const addScore = async (e) => {
   e.preventDefault();
 
-  const newScore = JSON.parse(localStorage.getItem('scores')) || [];
+  const user = document.querySelector('.user-name').value;
+  const score = document.querySelector('.user-score').value;
 
-  const userName = document.querySelector('.user-name').value;
-  const userScore = document.querySelector('.user-score').value;
-
-  const score = new Score(userName, userScore);
-
-  newScore.push(score);
-
-  localStorage.setItem('scores', JSON.stringify(newScore));
+  await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/miKeCVnfMltmQcmqMBh6/scores/', {
+    method: 'POST',
+    body: JSON.stringify({
+      user,
+      score,
+    }),
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+    },
+  });
 
   e.target.reset();
 
-  Interface.createScore(score);
+  getScores();
 };
 
 export default addScore;
