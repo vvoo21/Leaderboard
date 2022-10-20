@@ -1,13 +1,11 @@
-import _ from 'lodash';
 import './style.css';
+import addScore from './modules/addScore.js';
+import Interface from './modules/interface.js';
 
-function component() {
-  const element = document.createElement('div');
+const form = document.querySelector('.form');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Configure', 'webpack'], ' ');
+form.addEventListener('submit', addScore);
 
-  return element;
-}
-
-document.body.appendChild(component());
+window.addEventListener('load', () => {
+  Interface.displayScore();
+});
