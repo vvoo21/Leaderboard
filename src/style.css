@@ -23,10 +23,8 @@ body {
 header {
   display: flex;
   width: 100%;
-  padding: 60px;
-  background-image: url('img/header-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 40px;
+  background-color: var(--dark);
 }
 
 .primary-title{
@@ -43,6 +41,7 @@ main {
   width: 100%;
   align-content: center;
   justify-content: center;
+  padding-top: 50px;
 }
 
 section {
@@ -69,6 +68,7 @@ section {
 }
 
 button {
+  height: fit-content;
   border-radius: 0.25rem;
   background: var(--light);
   border: 1px solid var(--grey);
@@ -121,7 +121,9 @@ tr:nth-child(even){
 }
 
 .Add-score-container {
+  padding-top: 0.75rem;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .form {
