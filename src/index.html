@@ -5,8 +5,55 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello world!</h1>
+  <header>
+    <h1 class="primary-title">LEADER BOARD</h1>
+  </header>
+  <main>
+    <section class="recent-scores">
+      <div class="wrap-title">
+        <h2 class="score-title">Recent Scores</h2>
+        <button type="button" class="refresh-btn">Refresh</button>
+      </div>
+      <div class="table-container">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td>Vanessa</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Vanessa</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Vanessa</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </thead>
+        </table>
+      </div>
+    </section>
+    <section class="Add-score">
+      <div class="Add-score-container">
+        <h2 class="score-title">Add your score</h2>
+        <form class="form" action="#" method="get">
+          <input class="user-name" type="text" name="user" placeholder="Your name" aria-label="user" minlength="2" maxlength="18" required>
+          <input class="user-score" type="text" name="score" placeholder="Your score" aria-label="score" min="0" max="1000" required>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
