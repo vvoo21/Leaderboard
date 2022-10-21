@@ -18,6 +18,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url('img/bg-leaderboard.png');
+  background-size: cover;
 }
 
 header {
@@ -41,7 +42,7 @@ main {
   width: 100%;
   align-content: center;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 section {
@@ -94,20 +95,24 @@ tr,
 tbody {
   display: flex;
   width: 100%;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem;
   justify-content: space-between;
 }
 
 tr {
   cursor: default;
+  align-content: center;
 }
 
 tbody {
   flex-direction: column;
+  height: 300px;
+  overflow-y: scroll;
 }
 
 th,
 td {
+  display: flex;
   color: var(--dark);
   font-size: 1.3rem;
 }
@@ -145,4 +150,26 @@ tr:nth-child(even) {
 
 .submit-btn {
   align-self: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .primary-title {
+    font-size: 3rem;
+  }
+
+  main {
+  display: flex;
+  flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+    padding:0.75rem 3rem;
+    border-bottom: 1px solid var(--grey);
+  }
+
+  .Add-score-container {
+    align-items: center;
+  }
+
 }
